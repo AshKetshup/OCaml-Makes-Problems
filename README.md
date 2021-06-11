@@ -1,2 +1,2 @@
 # OCamlProblems
-Problemas de Logica, Teoria da Computação, Programação Funcional (OCaml)
+Problemas de Logica Computacional (LC), Teoria da Computação (TC), Programação Funcional (PF) (OCaml)
