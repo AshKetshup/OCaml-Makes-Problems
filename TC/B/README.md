@@ -6,7 +6,7 @@
 
 * Considere uma gramatica algebrica G = (;N;P;S ) com possivelmente produções epsilon.
 * Escreva um programa que lê um inteiro n e uma gramatica G 
-* calcule o conjunto de palavras de tamanho menor ou igual a n. 
+* Calcule o conjunto de palavras de tamanho menor ou igual a n. 
 * Estas palavras serão listadas por ordem alfabetica, uma por linha.
 --- 
 ## Entrada
@@ -15,7 +15,7 @@
 
 * os simbolos não terminais são representadas por nomes (string) começados por **MAIUSCULAS**;
 * e os simbolos terminais são constituidos exclusivamente por **minusculas**. 
-* Em particular o smbolo inicial sera sempre o não-terminal **S**.
+* Em particular o simbolo inicial sera sempre o não-terminal **S**.
 * Uma produção tera sempre o formato **N ->** em que uma sequência não vazia de simbolos (terminais ou não-terminais separados por um espaço). 
   * Em particular o simbolo **€ (epsilon)** e representado pelo caracter **_ (underscore)**.
 
