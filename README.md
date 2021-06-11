@@ -1,2 +1,2 @@
-# ProblemasTC
-Problemas de TC (OCaml)
+# OCamlProblems
+Problemas de Logica, Teoria da Computação, Programação Funcional (OCaml)
