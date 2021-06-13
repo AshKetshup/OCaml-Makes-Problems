@@ -5,11 +5,11 @@
 ### Problema - Este problema e uma variante do Problema C
 
 * Um ramo de ADN e uma sequência nita de nucleotídeos adenina (A), citosina (C), guanina (G) e timina (T). 
-* Consideremos para esse efeito o alfabeto A = fA;C;G;T g.
+* Consideremos para esse efeito o alfabeto A = {A;C;G;T}.
 * Neste exercício pretendemos implementar um mecanismos de procura eciente de padrão regular num ramos de ADN. 
 Por padrão entendemos uma disposição de nucleotdeos (i.e. caracteres A,C,G,T) que possa ser expressa por uma expressão regular sobre A.
 * O objectivo deste exercício e, dada uma expressão regular sobre o alfabeto A e dado um ramos de ADN, mostrar onde ocorre no dado ramo de ADN a primeira sequncia de nucleotídeos que se assemelha ao padrão, de forma eficiente, claro. Por primeira entendemos que começa e termina em primeiro lugar.
-* Para esse efeito fornece-se um conjunto de funções, em particular a função regexp que traduz uma string numa expressão regular. Estas funç~oes deverão ser copiadas integralmente no cabeçalho da vossa solução.
+* Para esse efeito fornece-se um conjunto de funções, em particular a função regexp que traduz uma string numa expressão regular. Estas funções deverão ser copiadas integralmente no cabeçalho da vossa solução.
 * Recomenda-se igualmente a leitura do artigo : [Regular Expression Search algorithm (link)](https://www.fing.edu.uy/inco/cursos/intropln/material/p419-thompson.pdf) e das paginas : 
   * [Regular Expression Matching Can Be Simple And Fast (link) ](https://swtch.com/~rsc/regexp/regexp1.html)
   * [A Regular Expression Matcher (link)](https://www.cs.princeton.edu/courses/archive/spr09/cos333/beautiful.html)
