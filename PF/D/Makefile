@@ -1,4 +1,4 @@
-PROBLEMA = B
+PROBLEMA = D
 SOURCE = $(PROBLEMA).ml
 EXEC = a.out
 TEST_FOLDER = Tests

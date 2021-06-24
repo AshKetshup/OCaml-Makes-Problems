@@ -35,7 +35,7 @@ compare:
 clean:
 	@ echo "\nCLEANING" 
 	@ echo "Removing complementary files."
-	@ rm a.out $(PROBLEMA).cmi $(PROBLEMA).cmx $(PROBLEMA).o
+	@ rm a.out *.cmi *.cmx *.o
 	@ echo "Removing $(RESULTS) folder."
 	@ rm -r $(TEST_FOLDER)/$(RESULTS)
 	@ echo "Creating $(RESULTS) folder."
