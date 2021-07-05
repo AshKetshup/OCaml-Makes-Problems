@@ -58,6 +58,7 @@ let clean_island (mat, h, w) =
     result
 
 
+(* Main Function *)
 let () = 
     entrada ()   |> 
     clean_island |> 

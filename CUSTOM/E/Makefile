@@ -1,5 +1,5 @@
-PROBLEMA = E
-SOURCE = $(PROBLEMA).ml
+PROBLEM = E
+SOURCE = $(PROBLEM).ml
 EXEC = a.out
 TEST_FOLDER = Tests
 ER_FOLDER = Expected_Results
@@ -41,60 +41,64 @@ On_Purple='\033[45m'      # Purple
 On_Cyan='\033[46m'        # Cyan
 On_White='\033[47m'       # White
 
+showtime=time -f "Time:\t%U + %S"
+showfile="\n"$(Black)$(On_White)$$file" "$(Color_Off)
+initcolor=$(On_Black)$(BGreen)
+donecolor=$(On_Green)$(BWhite)
 
 all: compile test compare
 
 compile:
-	@ echo "\n\033[40m\033[0;32mCOMPILING\033[0m"
+	@ echo "\n"$(initcolor)"COMPILING "$(Color_Off)"\n"
 	ocamlopt $(SOURCE)
-	@ echo "DONE COMPILING\033[0m\n"
+	@ echo "\n"$(On_Green)$(BWhite)"DONE COMPILING "$(Color_Off)"\n"
 
 test:
-	@ echo "\n\033[40m\033[0;32mTESTING\033[0m"
-	@ cd $(TEST_FOLDER) &&                                   \
-	for file in *.in;   									 \
-	do                                                       \
-		echo "\n$$file";									 \
-		time ../$(EXEC) < "$$file" > "$(RESULTS)/$$file.out";\
+	@ echo "\n"$(initcolor)"TESTING "$(Color_Off)"\n"
+	@ cd $(TEST_FOLDER) &&                                   		\
+	for file in *.in;   									 		\
+	do                                                       		\
+		echo $(showfile);											\
+		$(showtime) ../$(EXEC) < "$$file" > "$(RESULTS)/$$file.out";\
 	done
-	@ echo "DONE TESTING\n"
+	@ echo $(donecolor)"DONE TESTING "$(Color_Off)"\n"
 
 time:
-	@ echo "\n\033[40m\033[0;32mTIMING\033[0m"
-	@ cd $(TEST_FOLDER) &&                                   \
-	for file in *.in;   									 \
-	do                                                       \
-		echo $$file;										 \
-		time ../$(EXEC) < "$$file";     					 \
+	@ echo "\n"$(initcolor)"TIMING "$(Color_Off)"\n"
+	@ cd $(TEST_FOLDER) &&                                   		\
+	for file in *.in;   									 		\
+	do                                                       		\
+		echo $(showfile);											\
+		$(showtime) ../$(EXEC) < "$$file";	 						\
 	done
-	@ echo "DONE TESTING\033[0m\n"
+	@ echo "\n"$(donecolor)"DONE TESTING "$(Color_Off)"\n"
 
 compare:
-	@ echo "\n\033[40m\033[0;32mCOMPARING\033[0m."
-	@ cd $(ER_FOLDER) &&                                     \
-	for file in *.out;   									 \
-	do                                                       \
-		echo $$file;                                         \
-		diff "$$file" "../$(TEST_FOLDER)/$(RESULTS)/$$file"; \
+	@ echo "\n"$(initcolor)"COMPARING "$(Color_Off)"\n"
+	@ cd $(ER_FOLDER) &&                                     		\
+	for file in *.out;   									 		\
+	do                                                       		\
+		echo $(showfile);                                         	\
+		diff "$$file" "../$(TEST_FOLDER)/$(RESULTS)/$$file"; 		\
 	done
-	@ echo "DONE COMPARING\033[0m\n"
+	@ echo "\n"$(donecolor)"DONE COMPARING "$(Color_Off)"\n"
 
 clean:
-	@ echo "\n\033[40m\033[0;32mCLEANING\033[0m" 
+	@ echo "\n"$(initcolor)"CLEANING "$(Color_Off) 
 	@ echo "Removing complementary files."
-	@ rm a.out $(PROBLEMA).cmi $(PROBLEMA).cmx $(PROBLEMA).o
+	@ rm a.out $(PROBLEM).cmi $(PROBLEM).cmx $(PROBLEM).o
 	@ echo "Removing $(RESULTS) folder."
 	@ rm -r $(TEST_FOLDER)/$(RESULTS)
 	@ echo "Creating $(RESULTS) folder."
 	@ mkdir $(TEST_FOLDER)/$(RESULTS)
-	@ echo "DONE CLEANING\033[0m\n"
+	@ echo "\n"$(donecolor)"DONE CLEANING "$(Color_Off)"\n"
 
 setup:
-	@ echo "\n\033[40m\033[0;32mSETTING\033[0m UP"
+	@ echo "\n"$(initcolor)"SETTING UP"$(Color_Off)"\n"
 	@ echo "Criar: $(TEST_FOLDER)"
 	@ mkdir $(TEST_FOLDER)
 	@ echo "Criar: $(TEST_FOLDER)/$(RESULTS)"
 	@ mkdir $(TEST_FOLDER)/$(RESULTS)
 	@ echo "Criar: $(ER_FOLDER)"
 	@ mkdir $(ER_FOLDER)
-	@ echo "DONE SETTING UP\033[0m\n"
+	@ echo "\n"$(donecolor)"DONE SETTING UP"$(Color_Off)"\n"
