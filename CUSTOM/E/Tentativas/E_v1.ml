@@ -35,6 +35,9 @@ let print_matrix matrix =
 let clean_island (mat, h, w) =
     let result = Array.make_matrix h w 0 in
     let h, w = (h-1), (w-1) in
+    let is_border (a, b) = 
+        a = 0 || a = h || b = 0 || b = w
+    in
     let rec fill (a, b) = 
         if mat.(a).(b) = 1 && result.(a).(b) = 0 then (
             result.(a).(b) <- 1;
@@ -49,19 +52,13 @@ let clean_island (mat, h, w) =
             List.iter (fun x -> fill x) possibilities
         )
     in
-    let rec run i j = 
-        let () = fill (i,j) in
-        match i, j with
-        | n, m when (n, m) = (h, w) -> ()
-        | _, m when m = w -> run (i+1) 0
-        | n, _ when n = h -> run i (j+1)
-        | 0, _ -> run i (j+1)
-        | _, 0 -> run i w
-        | _, _ -> ()
-    in run 0 0;
+    Array.iteri (fun i x ->
+        Array.iteri (fun j y -> if is_border (i, j) then fill (i, j)) x
+    ) mat;
     result
 
 
+(* Main Function *)
 let () = 
     entrada ()   |> 
     clean_island |> 
