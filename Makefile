@@ -58,31 +58,31 @@ compile:
 
 test:
 	@ echo "\n"$(initcolor)"TESTING "$(Color_Off)"\n"
-	@ cd $(TEST_FOLDER) &&                                   		\
-	for file in *.in;   									 		\
-	do                                                       		\
-		echo $(showfile);											\
+	@ cd $(TEST_FOLDER) &&                                          \
+	for file in *.in;                                               \
+	do                                                              \
+		echo $(showfile);                                           \
 		$(showtime) ../$(EXEC) < "$$file" > "$(RESULTS)/$$file.out";\
 	done
 	@ echo $(donecolor)"DONE TESTING "$(Color_Off)"\n"
 
 time:
 	@ echo "\n"$(initcolor)"TIMING "$(Color_Off)"\n"
-	@ cd $(TEST_FOLDER) &&                                   		\
-	for file in *.in;   									 		\
-	do                                                       		\
-		echo $(showfile);											\
-		$(showtime) ../$(EXEC) < "$$file";	 						\
+	@ cd $(TEST_FOLDER) &&                                          \
+	for file in *.in;                                               \
+	do                                                              \
+		echo $(showfile);                                           \
+		$(showtime) ../$(EXEC) < "$$file";                          \
 	done
 	@ echo "\n"$(donecolor)"DONE TESTING "$(Color_Off)"\n"
 
 compare:
 	@ echo "\n"$(initcolor)"COMPARING "$(Color_Off)"\n"
-	@ cd $(ER_FOLDER) &&                                     		\
-	for file in *.out;   									 		\
-	do                                                       		\
-		echo $(showfile);                                         	\
-		diff "$$file" "../$(TEST_FOLDER)/$(RESULTS)/$$file"; 		\
+	@ cd $(ER_FOLDER) &&                                            \
+	for file in *.out;                                              \
+	do                                                              \
+		echo $(showfile);                                           \
+		diff "$$file" "../$(TEST_FOLDER)/$(RESULTS)/$$file";        \
 	done
 	@ echo "\n"$(donecolor)"DONE COMPARING "$(Color_Off)"\n"
 
@@ -112,10 +112,23 @@ setup:
 	@ echo "\n"$(donecolor)"DONE SETTING UP"$(Color_Off)"\n"
 
 generate:
-	cd $(GEN_FOLDER) &&												\
+	cd $(GEN_FOLDER) &&                                             \
 	ocamlopt -o $(GEN_FOLDER).out $(GEN_FOLDER).ml
 	date +%s%N | $(GEN_FOLDER)/$(GEN_FOLDER).out > "$(TEST_FOLDER)/$(IN).in"
 
 gen_clean:
-	cd $(GEN_FOLDER) &&												\
+	cd $(GEN_FOLDER) &&                                             \
 	rm *.o *.cmi *.cmx *.out
+
+help:
+	@ echo "\nMAKE [ARGS]\n"
+	@ echo "[ARGUMENTS]:"
+	@ echo "	compile   - Compiles defined Problem"
+	@ echo "	test      - Tests defined Problem with each input inside 'Tests' folder"
+	@ echo "	time      - _test_ command but outputting time taken"
+	@ echo "	compare   - _test_ command but comparing output files with expected content from 'Expected_Results' folder"
+	@ echo "	clean     - Cleans complementary files such as .out .cmi .cmx .o"
+	@ echo "	setup     - Setups a new problem directory ready to new code"
+	@ echo "	generate  - Based on the generation OCaml script generates a new random .in file randomly"
+	@ echo "	gen_clean - Cleans generation folder from complementary files"
+	@ echo ""
