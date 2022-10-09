@@ -1,0 +1,4 @@
+include ../../Makefile
+
+PROBLEM = A
+
