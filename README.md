@@ -1,16 +1,13 @@
 <div align="center">
-  <a href="https://github.com/AshKetshup/Landmark">
+  <a href="https://github.com/AshKetshup/OCaml-Makes-Problems">
     <img src="res/Logo.png" alt="Logotype" width="50%" style="
         object-fit: cover; 
         mask-image: radial-gradient(elipse 50%, black 50%, transparent 50%);
     ">
   </a>
 
-<h2 align="center">OCaml Makes Problems</h2>
-
-  <p align="center">
-    A Makefile template setup for OCaml Problems
-  </p>
+  <h3>OCaml Makes Problems</h3>
+  <p>A Makefile template setup for OCaml Problems</p>
 </div>
 
 ---
@@ -31,7 +28,7 @@ I created a series of tools ready to ease productivity on a said OCaml Problem:
 
 Said command outputs a guideline on what each command does.
 
-<img src="res/help.jpg" alt="Help Command">
+<img src="res/help.jpg" alt="Help Command" width="100%">
 
 ---
 
@@ -41,7 +38,7 @@ In order to start a new Problem we need to setup all folders in order to be read
 
 Heres an example on how to do it:
 
-<img src="res/setup.gif" alt="Setup Command" width="80%">
+<img src="res/setup.gif" alt="Setup Command" width="100%">
 
 ---
 
@@ -50,7 +47,7 @@ Heres an example on how to do it:
 A simple way to compile things. It's used `ocamlopt` to compile it into a binary.
 Compiles `.ml` file with the same name as the specified problem.
 
-<img src="res/compile.gif" alt="Setup Command" width="80%">
+<img src="res/compile.gif" alt="Setup Command" width="100%">
 
 ---
 
@@ -64,7 +61,7 @@ The folder **Tests** contains in its root input files (`*.in`) ready to be used 
 
 Here's an example on how to use it:
 
-<img src="res/test.gif" alt="Setup Command" width="80%">
+<img src="res/test.gif" alt="Setup Command" width="100%">
 
 ---
 
