@@ -1,3 +1,11 @@
+<div id="top"></div>
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 <div align="center">
   <a href="https://github.com/AshKetshup/OCaml-Makes-Problems">
     <img src="res/Logo.png" alt="Logotype" width="50%" style="
@@ -65,3 +73,17 @@ Here's an example on how to use it:
 
 ---
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/AshKetshup/OCaml-Makes-Problems.svg?style=for-the-badge
+[contributors-url]: https://github.com/AshKetshup/OCaml-Makes-Problems/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AshKetshup/OCaml-Makes-Problems.svg?style=for-the-badge
+[forks-url]: https://github.com/AshKetshup/OCaml-Makes-Problems/network/members
+[stars-shield]: https://img.shields.io/github/stars/AshKetshup/OCaml-Makes-Problems.svg?style=for-the-badge
+[stars-url]: https://github.com/AshKetshup/OCaml-Makes-Problems/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AshKetshup/OCaml-Makes-Problems.svg?style=for-the-badge
+[issues-url]: https://github.com/AshKetshup/OCaml-Makes-Problems/issues
+[license-shield]: https://img.shields.io/github/license/AshKetshup/OCaml-Makes-Problems.svg?style=for-the-badge
+[license-url]: https://github.com/AshKetshup/OCaml-Makes-Problems/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/diogo-simoes-8b5a0618a
