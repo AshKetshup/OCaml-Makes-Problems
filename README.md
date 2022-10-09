@@ -1,7 +1,22 @@
-# OCamlProblems
-Problemas de Logica Computacional (LC), Teoria da Computação (TC), Programação Funcional (PF) (OCaml)
+<div align="center">
+  <a href="https://github.com/AshKetshup/Landmark">
+    <img src="res/Logo.png" alt="Logotype" width="500px" height="500px" style="
+        object-fit: cover; 
+        mask-image: radial-gradient(elipse 50%, black 50%, transparent 50%);
+    ">
+  </a>
+
+<h2 align="center">OCaml Makes Problems</h2>
+
+  <p align="center">
+    A Makefile template setup for OCaml Problems
+  </p>
+</div>
 
 ---
+
+Problemas de Logica Computacional (LC), Teoria da Computação (TC), Programação Funcional (PF) (OCaml)
+
 
 # Makefile
 
