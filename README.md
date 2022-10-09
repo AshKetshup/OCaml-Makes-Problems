@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/AshKetshup/Landmark">
-    <img src="res/Logo.png" alt="Logotype" width="500px" height="500px" style="
+    <img src="res/Logo.png" alt="Logotype" width="50%" style="
         object-fit: cover; 
         mask-image: radial-gradient(elipse 50%, black 50%, transparent 50%);
     ">
