@@ -28,6 +28,16 @@ Problemas de Logica Computacional (LC), Teoria da Computação (TC), Programaç�
 
 I made a makefile to start all problems from the same format and keep file organization.
 
+### How to start?
+In order to start we need to download said Makefile to the root of the directory where you'll keep all your OCaml Problems.
+
+You may download it by `wget`:
+
+```bash
+wget https://raw.githubusercontent.com/AshKetshup/OCaml-Makes-Problems/TheDarkestTimeline/Makefile
+```
+
+
 ### How it works?
 I created a series of tools ready to ease productivity on a said OCaml Problem:
 
